@@ -44,8 +44,8 @@ export const geminiService = {
     ${wordsContext}
 
     Vocabulary Constraint:
-    - Use approximately 30-40% words from the user's 'Known Words' list: ${knownWords.join(", ")}.
-    - Use approximately 60-70% NEW words or words from the 'Learning Words' list above to challenge the user.
+    - Use approximately 40-50% words from the user's 'Known Words' list: ${knownWords.join(", ")}.
+    - Use approximately 50-60% NEW words or words from the 'Learning Words' list above to challenge the user.
     
     Requirements:
     1. **Story Structure**: Break the story down into individual sentences. For EACH sentence, provide:
@@ -54,6 +54,8 @@ export const geminiService = {
     3. **Content**:
        - If Level is A0, keep it very simple.
        - If Level is A1/A2, include specific terminology for ${domain}.
+       - if Level is B1/B2, include specific terminology for ${domain}.
+       - if Level is C1/C2, include specific terminology for ${domain}.
     `;
 
     const schema: Schema = {

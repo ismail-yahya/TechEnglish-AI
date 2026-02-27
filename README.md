@@ -24,7 +24,7 @@ TechEnglish AI is a comprehensive full-stack application designed to help users 
 - Node.js & Express (TypeScript)
 - Supabase (PostgreSQL)
 - Google Gemini API & AssemblyAI
-- JWT & Bcrypt (للأمان والمصادقة)
+- الأمان (Security): JWT & Bcrypt (للمصادقة), Zod (للتحقق من المدخلات), Helmet (لحماية الترويسات), Express Rate Limit (لمنع هجمات DDoS)
 
 ## 🚀 طريقة التشغيل محلياً (Running Locally)
 
@@ -71,6 +71,9 @@ TechEnglish AI is a comprehensive full-stack application designed to help users 
    CLIENT_URL="http://localhost:5173"
    ```
 
+   **ملاحظة**: للواجهة الأمامية في بيئة الإنتاج، قم بإنشاء ملف `.env` في مجلد `client` واضبط قيمة:
+   `VITE_API_URL="رابط-الواجهة-الخلفية-الخاص-بك"`
+
 4. **تشغيل المشروع**:
    افتح نافذتين للطرفية (Terminal).
 
@@ -92,14 +95,17 @@ TechEnglish AI is a comprehensive full-stack application designed to help users 
 
 ## 🌍 طريقة النشر (Deployment)
 
-المشروع مهيأ ليتم استضافته كواجهة أمامية منفصلة وواجهة خلفية منفصلة (Decoupled Server).
+المشروع مهيأ ليتم استضافته كواجهة أمامية منفصلة وواجهة خلفية منفصلة للحصول على أفضل أداء للخطط المجانية.
 
-1. **الواجهة الأمامية**: يمكن نشر مجلد `client` بسهولة ومجاناً على منصات مثل **Vercel** أو **Netlify**.
+1. **الواجهة الأمامية (Frontend)**: نوصي باستضافتها مجاناً وسهولة على منصات مثل **Vercel** أو **Netlify**.
    - أمر البناء: `npm run build`
    - مجلد الإخراج: `dist`
-2. **الواجهة الخلفية**: يمكن نشر مجلد `server` على منصات تدعم Node.js مثل **Render** أو **Koyeb**. تذكر إضافة متغيرات البيئة في لوحة تحكم الاستضافة.
+   - متغيرات البيئة: يجب إضافة `VITE_API_URL` ووضع رابط خادم الواجهة الخلفية كقيمة له.
+
+2. **الواجهة الخلفية (Backend)**: نوصي برفعها على **Render** (كمستضيف ويب مجاني) أو **Koyeb** (لأداء دائم بدون نوم الخادم).
    - أمر البناء: `npm run build`
    - أمر التشغيل: `npm start`
+   - متغيرات البيئة: قم بنسخ ما في ملف `.env` وإضافتها للخدمة السحابية. تأكد من تعديل `CLIENT_URL` ليطابق رابط الـ Vercel الخاص بالواجهة الأمامية.
 
 ## ⚖️ الترخيص (License)
 
