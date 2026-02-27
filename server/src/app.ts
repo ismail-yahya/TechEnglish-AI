@@ -11,9 +11,20 @@ import speechRoutes from "./routes/speech.routes";
 
 const app = express();
 
-// Middleware
+// CORS — must be FIRST to handle preflight OPTIONS before other middleware
+app.use(
+  cors({
+    origin: config.clientUrl,
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  }),
+);
+
+// Security headers
 app.use(helmet());
 
+// Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // limit each IP to 100 requests per windowMs
@@ -21,12 +32,6 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-app.use(
-  cors({
-    origin: config.clientUrl,
-    credentials: true,
-  }),
-);
 app.use(express.json({ limit: "10mb" }));
 
 // Health check
