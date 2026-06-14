@@ -19,7 +19,7 @@ import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
 
 const NAV_ITEMS = [
-  { to: "/", icon: LayoutDashboard, label: "Dashboard" },
+  { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
   { to: "/stories", icon: BookOpen, label: "Stories" },
   { to: "/vocabulary", icon: Brain, label: "Vocabulary" },
   { to: "/profile", icon: Settings, label: "Profile" },

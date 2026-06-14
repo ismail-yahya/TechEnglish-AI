@@ -11,6 +11,7 @@ import { useAuthStore } from "./stores/authStore";
 import { useThemeStore } from "./stores/themeStore";
 import Sidebar from "./components/Sidebar";
 import LoginPage from "./pages/LoginPage";
+import LandingPage from "./pages/LandingPage";
 import DashboardPage from "./pages/DashboardPage";
 import StoriesPage from "./pages/StoriesPage";
 import StoryReaderPage from "./pages/StoryReaderPage";
@@ -78,6 +79,17 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
+          path="/"
+          element={
+            isAuthenticated ? (
+              <Navigate to="/dashboard" replace />
+            ) : (
+              <LandingPage />
+            )
+          }
+        />
+
+        <Route
           path="/login"
           element={
             isLoading ? (
@@ -85,7 +97,7 @@ function App() {
                 <div className="spinner" style={{ width: 32, height: 32 }} />
               </div>
             ) : isAuthenticated ? (
-              <Navigate to="/" replace />
+              <Navigate to="/dashboard" replace />
             ) : (
               <LoginPage />
             )
@@ -93,7 +105,7 @@ function App() {
         />
 
         <Route element={<ProtectedLayout />}>
-          <Route path="/" element={<DashboardPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/stories" element={<StoriesPage />} />
           <Route path="/stories/:id" element={<StoryReaderPage />} />
           <Route path="/vocabulary" element={<VocabularyPage />} />
