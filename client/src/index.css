@@ -24,12 +24,20 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /* Custom Color Palette */
-  --color-ice-blue: #d6e6f3;
-  --color-powder-blue: #b0e0e6;
-  --color-sapphire: #a6c5d7;
-  --color-neon-blue: #0f52ba;
-  --color-deep-navy: #000926;
+  /* User Direct Tokens */
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-hover: var(--accent-hover);
+
+  /* Custom Color Palette (Nature / Forest & Stone) */
+  --color-pine-teal: #344e41;
+  --color-hunter-green: #3a5a40;
+  --color-fern: #588157;
+  --color-dry-sage: #a3b18a;
+  --color-dust-grey: #dad7cd;
+  --color-stone-ivory: #f5f4f0;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -41,49 +49,67 @@
 }
 
 :root {
-  /* Light Mode */
-  --background: #f0f4f8; /* Soft bright background */
-  --foreground: #000926; /* Deep Navy */
-  --card: rgba(255, 255, 255, 0.6);
-  --card-foreground: #000926;
-  --popover: rgba(255, 255, 255, 0.8);
-  --popover-foreground: #000926;
-  --primary: #0f52ba;
-  --primary-foreground: #ffffff;
-  --secondary: #d6e6f3;
-  --secondary-foreground: #0f52ba;
-  --muted: rgba(166, 197, 215, 0.3); /* Sapphire light opaque */
-  --muted-foreground: #4b5563;
-  --accent: rgba(176, 224, 230, 0.5); /* Powder blue semi-transparent */
-  --accent-foreground: #0f52ba;
-  --destructive: #ef4444;
-  --border: rgba(15, 82, 186, 0.2);
-  --input: rgba(15, 82, 186, 0.2);
-  --ring: #0f52ba;
+  /* Light Theme - نفس نغمات الباقة الأصلية مع حفظ التباين */
+  --bg-primary: #f5f4f0; /* عاجي هادئ مستوحى من لون الحجر */
+  --bg-secondary: #dad7cd; /* ~Dust Grey: ألوانك الأصلية للحاويات */
+  --text-primary: #344e41; /* ~Pine Teal: نصوص رئيسية واضحة جداً */
+  --text-secondary: #3a5a40; /* ~Hunter Green: نصوص فرعية */
+  --accent: #3a5a40; /* زر داكن ووقور ومريح */
+  --accent-hover: #344e41; /* تفاعل داكن ثابت */
+  --border: #a3b18a; /* ~Dry Sage للحدود */
+  --grid-color: rgba(52, 78, 65, 0.07);
+  --grid-size: 60px;
+
+  /* App Mappings */
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
+  --card: rgba(218, 215, 205, 0.45);
+  --card-foreground: var(--text-primary);
+  --popover: #f5f4f0;
+  --popover-foreground: var(--text-primary);
+  --primary: #3a5a40;
+  --primary-foreground: #f5f4f0;
+  --secondary: var(--bg-secondary);
+  --secondary-foreground: var(--text-primary);
+  --muted: rgba(163, 177, 138, 0.25);
+  --muted-foreground: var(--text-secondary);
+  --accent-foreground: #f5f4f0;
+  --destructive: #b91c1c;
+  --input: var(--border);
+  --ring: #3a5a40;
 
   --radius: 1rem;
 }
 
 .dark {
-  /* Dark Mode */
-  --background: #000926; /* Deep Navy */
-  --foreground: #ffffff;
-  --card: rgba(15, 82, 186, 0.1); /* Frosted Neon Blue */
-  --card-foreground: #ffffff;
-  --popover: rgba(15, 82, 186, 0.15);
-  --popover-foreground: #ffffff;
-  --primary: #0f52ba;
+  /* Dark Theme - نفس ألوانك الأصلية مدمجة مع خلفية فحمية دافئة */
+  --bg-primary: #181c19; /* أسود ترابي مطفأ يتماشى مع الغابة */
+  --bg-secondary: #222723; /* عمق صامت للبطاقات */
+  --text-primary: #dad7cd; /* ~Dust Grey: نصك الأصلي ناعم وغير متوهج */
+  --text-secondary: #a3b18a; /* ~Dry Sage: مريح جداً كنص ثانوي */
+  --accent: #588157; /* ~Fern: لون طبيعي وزاهٍ للأزرار في الظلام */
+  --accent-hover: #a3b18a; /* تفاعل أفتح قليلاً */
+  --border: rgba(163, 177, 138, 0.25);
+  --grid-color: rgba(218, 215, 205, 0.05);
+  --grid-size: 60px;
+
+  /* App Mappings */
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
+  --card: rgba(34, 39, 35, 0.7);
+  --card-foreground: var(--text-primary);
+  --popover: #222723;
+  --popover-foreground: var(--text-primary);
+  --primary: #588157;
   --primary-foreground: #ffffff;
-  --secondary: rgba(166, 197, 215, 0.1);
-  --secondary-foreground: #d6e6f3;
-  --muted: rgba(255, 255, 255, 0.1);
-  --muted-foreground: #a6c5d7; /* Sapphire */
-  --accent: rgba(176, 224, 230, 0.2); /* Powder Blue */
+  --secondary: rgba(163, 177, 138, 0.15);
+  --secondary-foreground: var(--text-primary);
+  --muted: rgba(34, 39, 35, 0.6);
+  --muted-foreground: var(--text-secondary);
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
-  --border: rgba(166, 197, 215, 0.2); /* Sapphire slightly transparent */
-  --input: rgba(166, 197, 215, 0.2);
-  --ring: #b0e0e6; /* Powder Blue */
+  --input: var(--border);
+  --ring: #588157;
 }
 
 @layer base {
@@ -99,17 +125,25 @@
       "Segoe UI",
       sans-serif;
     -webkit-font-smoothing: antialiased;
+    background-color: var(--bg-primary);
     background-image:
+      linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px),
       radial-gradient(
         circle at top left,
-        rgba(176, 224, 230, 0.2) 0%,
+        rgba(58, 90, 64, 0.12) 0%,
         transparent 40%
       ),
       radial-gradient(
         circle at bottom right,
-        rgba(15, 82, 186, 0.1) 0%,
+        rgba(88, 129, 87, 0.08) 0%,
         transparent 40%
       );
+    background-size:
+      var(--grid-size) var(--grid-size),
+      var(--grid-size) var(--grid-size),
+      100% 100%,
+      100% 100%;
     background-attachment: fixed;
     transition:
       background-color 0.3s ease,
@@ -117,17 +151,25 @@
   }
 
   .dark body {
+    background-color: var(--bg-primary);
     background-image:
+      linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px),
       radial-gradient(
         circle at top left,
-        rgba(15, 82, 186, 0.2) 0%,
+        rgba(88, 129, 87, 0.15) 0%,
         transparent 50%
       ),
       radial-gradient(
         circle at bottom right,
-        rgba(166, 197, 215, 0.1) 0%,
+        rgba(58, 90, 64, 0.1) 0%,
         transparent 50%
       );
+    background-size:
+      var(--grid-size) var(--grid-size),
+      var(--grid-size) var(--grid-size),
+      100% 100%,
+      100% 100%;
   }
 }
 
@@ -138,37 +180,37 @@
     -webkit-backdrop-filter: blur(16px);
     background: var(--card);
     border: 1px solid var(--border);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
   }
 
   .glass-panel {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    background: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(15, 82, 186, 0.1);
+    background: rgba(218, 215, 205, 0.4);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 32px rgba(52, 78, 65, 0.08);
   }
 
   .dark .glass-panel {
-    background: rgba(15, 82, 186, 0.1);
-    border: 1px solid rgba(166, 197, 215, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    background: rgba(34, 39, 35, 0.7);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   }
 
   .neon-glow {
-    box-shadow: 0 0 15px rgba(15, 82, 186, 0.5);
+    box-shadow: 0 0 15px rgba(58, 90, 64, 0.35);
   }
 
   .neon-glow:hover {
-    box-shadow: 0 0 25px rgba(15, 82, 186, 0.8);
+    box-shadow: 0 0 25px rgba(58, 90, 64, 0.55);
   }
 
   .dark .neon-glow {
-    box-shadow: 0 0 15px rgba(176, 224, 230, 0.4);
+    box-shadow: 0 0 15px rgba(88, 129, 87, 0.4);
   }
 
   .dark .neon-glow:hover {
-    box-shadow: 0 0 25px rgba(176, 224, 230, 0.6);
+    box-shadow: 0 0 25px rgba(88, 129, 87, 0.65);
   }
 
   .clickable-word {
