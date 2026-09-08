@@ -189,7 +189,7 @@ export default function LandingPage() {
         {/* Heading */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.2] max-w-4xl text-foreground mb-6">
           لا تتعلم اللغات كغيرك. <br />
-          <span className="bg-gradient-to-r from-primary via-indigo-500 to-accent bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#2d4638] via-[#3a5a40] to-[#588157] dark:from-[#588157] dark:via-[#7ea87c] dark:to-[#a3b18a] bg-clip-text text-transparent">
             ابنِ مسارك المخصص بالذكاء الاصطناعي
           </span>
         </h1>
@@ -584,7 +584,7 @@ export default function LandingPage() {
 
       {/* 7. CTA Section */}
       <section className="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 z-10 relative">
-        <div className="rounded-3xl bg-gradient-to-br from-primary via-indigo-650 to-accent text-primary-foreground p-8 sm:p-12 md:p-16 text-center shadow-2xl relative overflow-hidden neon-glow">
+        <div className="rounded-3xl bg-gradient-to-br from-[#2d4638] via-[#3a5a40] to-[#588157] dark:from-[#222723] dark:via-[#344e41] dark:to-[#3a5a40] text-primary-foreground p-8 sm:p-12 md:p-16 text-center shadow-2xl relative overflow-hidden neon-glow">
           {/* Background overlay rays */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15)_0%,transparent_60%)] pointer-events-none" />
 
