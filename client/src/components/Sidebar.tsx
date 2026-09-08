@@ -114,7 +114,7 @@ export default function Sidebar() {
             }`}
           >
             <span className="font-extrabold text-lg leading-tight tracking-tight text-foreground">
-              TechEnglish
+              Langflow
             </span>
             <span className="text-[0.65rem] font-medium text-accent uppercase tracking-widest">
               AI App

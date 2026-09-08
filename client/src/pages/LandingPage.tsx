@@ -48,7 +48,7 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-300 font-sans selection:bg-primary/30 selection:text-foreground overflow-hidden" dir="rtl">
+    <div className="min-h-screen bg-transparent text-foreground transition-colors duration-300 font-sans selection:bg-primary/30 selection:text-foreground overflow-hidden" dir="rtl">
       {/* Background Glows */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary/10 blur-[150px] dark:bg-primary/5" />
@@ -65,7 +65,7 @@ export default function LandingPage() {
               <Sparkles size={20} className="text-primary-foreground" />
             </div>
             <span className="font-extrabold text-xl leading-tight tracking-tight text-foreground">
-              LinguaFlow <span className="text-primary text-xs font-semibold uppercase tracking-widest px-1.5 py-0.5 rounded-md bg-primary/10">AI</span>
+              langflow <span className="text-primary text-xs font-semibold uppercase tracking-widest px-1.5 py-0.5 rounded-md bg-primary/10">AI</span>
             </span>
           </div>
 
@@ -221,7 +221,7 @@ export default function LandingPage() {
             <span className="w-3 h-3 rounded-full bg-red-500/80" />
             <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
             <span className="w-3 h-3 rounded-full bg-green-500/80" />
-            <span className="text-xs text-muted-foreground ml-2 select-none font-mono">LinguaFlow Interactive Player</span>
+            <span className="text-xs text-muted-foreground ml-2 select-none font-mono">langflow Interactive Player</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
@@ -413,7 +413,7 @@ export default function LandingPage() {
                 تجربة تعليمية ذكية تتكيف معك، لا العكس
               </h2>
               <p className="text-muted-foreground text-base leading-relaxed">
-                مع LinguaFlow AI، لن تتقيد بمناهج مسبقة الصنع. نظامنا الذكي يراقب مستواك الحقيقي ويصنع المحتوى في التو واللحظة ليكون تحدياً مناسباً تماماً لقدراتك الحالية.
+                مع langflow AI، لن تتقيد بمناهج مسبقة الصنع. نظامنا الذكي يراقب مستواك الحقيقي ويصنع المحتوى في التو واللحظة ليكون تحدياً مناسباً تماماً لقدراتك الحالية.
               </p>
 
               <div className="space-y-4 pt-4">
@@ -613,11 +613,11 @@ export default function LandingPage() {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-md">
               <Sparkles size={16} className="text-primary-foreground" />
             </div>
-            <span className="font-bold text-base">LinguaFlow AI</span>
+            <span className="font-bold text-base">langflow AI</span>
           </div>
 
           <p className="text-xs text-muted-foreground text-center">
-            © {new Date().getFullYear()} جميع الحقوق محفوظة لمنصة LinguaFlow AI لتعلّم اللغات التكيفي.
+            © {new Date().getFullYear()} جميع الحقوق محفوظة لمنصة langflow AI لتعلّم اللغات التكيفي.
           </p>
 
           <div className="flex items-center gap-6 text-xs text-muted-foreground font-medium">

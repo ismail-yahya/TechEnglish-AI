@@ -1,6 +1,6 @@
-# TechEnglish AI
+# Langflow AI
 
-TechEnglish AI is a comprehensive full-stack application designed to help users master English vocabulary and reading comprehension through AI-generated stories tailored to their proficiency level and chosen domains.
+Langflow AI is a comprehensive full-stack application designed to help users master English vocabulary and reading comprehension through AI-generated stories tailored to their proficiency level and chosen domains.
 
 ## 🌟 الميزات الرئيسية (Features)
 
@@ -39,8 +39,8 @@ TechEnglish AI is a comprehensive full-stack application designed to help users 
 1. **نسخ المشروع من GitHub**:
 
    ```bash
-   git clone https://github.com/YourUsername/techenglish-ai.git
-   cd techenglish-ai
+   git clone https://github.com/YourUsername/Langflow-ai.git
+   cd Langflow-ai
    ```
 
 2. **تثبيت الحزم البرمجية**:
@@ -62,7 +62,7 @@ TechEnglish AI is a comprehensive full-stack application designed to help users 
    في مجلد `server`، قم بإنشاء ملف باسم `.env` والصق فيه الإعدادات التالية مستنداً لـ `server/.env.example`:
 
    ```env
-   DATABASE_URL="postgresql://postgres:password@localhost:5432/techenglish?schema=public"
+   DATABASE_URL="postgresql://postgres:password@localhost:5432/Langflow?schema=public"
    JWT_SECRET="your-strong-jwt-secret-here"
    JWT_EXPIRES_IN="7d"
    GEMINI_API_KEY="your-google-gemini-api-key"

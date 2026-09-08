@@ -37,7 +37,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-background p-4 relative overflow-hidden">
+    <div className="min-h-screen w-full flex items-center justify-center bg-transparent p-4 relative overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px]" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-accent/20 blur-[120px]" />
@@ -50,7 +50,7 @@ export default function LoginPage() {
             <BookOpen size={32} className="text-primary-foreground" />
           </div>
           <h1 className="text-3xl font-bold mb-1 tracking-tight">
-            TechEnglish AI
+            Langflow AI
           </h1>
           <p className="text-muted-foreground text-sm">
             Learn technical English through interactive stories

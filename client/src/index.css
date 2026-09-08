@@ -90,7 +90,7 @@
   --accent: #588157; /* ~Fern: لون طبيعي وزاهٍ للأزرار في الظلام */
   --accent-hover: #a3b18a; /* تفاعل أفتح قليلاً */
   --border: rgba(163, 177, 138, 0.25);
-  --grid-color: rgba(218, 215, 205, 0.05);
+  --grid-color: rgba(218, 215, 205, 0.08);
   --grid-size: 60px;
 
   /* App Mappings */
